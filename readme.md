@@ -80,8 +80,8 @@ sudo systemctl restart docker
 ## nvm设置镜像 
 ### linux
 ```
-export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
-export NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
+export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
+export NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
 ```
 
 ### Win
