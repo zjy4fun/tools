@@ -91,6 +91,12 @@ nvm npm_mirror https://npmmirror.com/mirrors/npm/
 nvm node_mirror https://npmmirror.com/mirrors/node/ 
 ```
 
+解决 Windows Powershell 无法执行 yarn/pnpm 的问题
+打开 powershell 管理员模式，执行下面的命令
+```
+set-ExecutionPolicy RemoteSigned
+```
+
 
 ## npm 设置镜像
 ```
