@@ -125,3 +125,43 @@ npm config set cypress_download_mirror https://npmmirror.com/mirrors/cypress;
 https://github.com/RikudouPatrickstar/JetBrainsRuntime-for-Linux-x64
 
 直接替换 jbr 文件
+
+
+## Ubuntu 20.04 Gnome 禁用 tracker 避免 CPU 100%的问题
+
+参考：https://www.cnblogs.com/hellxz/p/12321283.html
+
+```
+gsettings set org.freedesktop.Tracker.Miner.Files crawling-interval -2
+gsettings set org.freedesktop.Tracker.Miner.Files enable-monitors false
+```
+删除索引数据
+```
+tracker reset --hard
+```
+
+
+## 解决搜狗输入法简体/繁体切换设置不生效的问题
+
+需要在 fcitx 的全局设置里面关掉快捷键
+
+## 解决Ubuntu中文显示异常的问题
+
+修改
+```
+/etc/fonts/conf.avail/64-language-selector-prefer.conf
+```
+中的配置，把SC放到第一位。
+
+## 解决 Jetbrains IDE 无法切换中文输入法的问题
+
+Help -> Edit Custom VM Options 追加下面的内容
+```
+-Drecreate.x11.input.method=true
+```
+
+## 解决 Linux 下 unzip 解压文件名乱码的问题
+
+```
+unzip -O cp936
+```
