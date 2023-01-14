@@ -166,6 +166,12 @@ Help -> Edit Custom VM Options 追加下面的内容
 unzip -O cp936
 ```
 
+## Linux zip 打包文件
+
+```
+zip -r outputfile folder1 folder2 folder3
+```
+
 ## 常用 vim 快捷键
 
 1. 移动光标
