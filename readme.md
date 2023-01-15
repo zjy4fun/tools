@@ -268,3 +268,7 @@ zip -r outputfile folder1 folder2 folder3
     - 要删除所有行，您可以使用代表所有行的%符号或 1，$ 范围：
         - Esc 键进入正常模式
         - 键入 %d，然后按 Enter 键以删除所有行。
+4. 搜索
+
+- /                 输入字符，n 或 N 上下搜索
+- shift + *         停在某个单词的某个字符上，shift + *，即可实现搜索
