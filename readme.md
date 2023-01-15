@@ -200,6 +200,8 @@ zip -r outputfile folder1 folder2 folder3
 - Y/y  复制一行
 - p    粘贴
 - x    删除单个字符/选中内容
+- dw   从光标位置向后删除直到删除单词结束
+- daw  删除光标位置所在的单词
 - dd   删除一行内容
 - 5dd  删除 5 行内容（光标需要放在待删除的第一行上）
 - :[start],[end]d 删除指定行内容
