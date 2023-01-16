@@ -272,3 +272,8 @@ zip -r outputfile folder1 folder2 folder3
 
 - /                 输入字符，n 或 N 上下搜索
 - shift + *         停在某个单词的某个字符上，shift + *，即可实现搜索
+
+5. 撤销
+
+- u           普通模式下，撤销上一个操作
+- ctrl + r    反撤销（撤销后又后悔了可以执行该命令）
