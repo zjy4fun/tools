@@ -277,3 +277,10 @@ zip -r outputfile folder1 folder2 folder3
 
 - u           普通模式下，撤销上一个操作
 - ctrl + r    反撤销（撤销后又后悔了可以执行该命令）
+
+
+## linux 批量修改文件后缀命令
+
+```bash
+rename 's/\.js/\.jsx/' *
+```
