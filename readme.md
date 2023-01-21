@@ -284,3 +284,17 @@ zip -r outputfile folder1 folder2 folder3
 ```bash
 rename 's/\.js/\.jsx/' *
 ```
+
+## WSL2 MySQL Client
+
+需要安装 mysql-client 访问 docker 中的 mysql-server，同时需要指定 ip 和端口号
+```bash
+mysql -h 127.0.0.1 -P 3306 -u root -p
+```
+
+否则会出现以下错误：
+```
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+```
+
+原因：MySQL 会默认访问本机安装的 mysql-server
