@@ -1,34 +1,62 @@
-## linux mint 装机
-### 卸载无用软件
+<!-- vscode-markdown-toc -->
+* 1. [linux mint 装机](#linuxmint)
+	* 1.1. [卸载无用软件](#)
+	* 1.2. [换源&&升级](#-1)
+	* 1.3. [安装常用软件](#-1)
+	* 1.4. [配置 Git](#Git)
+	* 1.5. [生成密钥](#-1)
+* 2. [安装 docker](#docker)
+* 3. [nvm设置镜像](#nvm)
+	* 3.1. [linux](#linux)
+	* 3.2. [Win](#Win)
+* 4. [npm 设置镜像](#npm)
+* 5. [npm 特殊包镜像](#npm-1)
+* 6. [解决 Jetbrains 中文输入法不跟随问题](#Jetbrains)
+* 7. [Ubuntu 20.04 Gnome 禁用 tracker 避免 CPU 100%的问题](#Ubuntu20.04GnometrackerCPU100)
+* 8. [解决搜狗输入法简体/繁体切换设置不生效的问题](#-1)
+* 9. [解决Ubuntu中文显示异常的问题](#Ubuntu)
+* 10. [解决 Jetbrains IDE 无法切换中文输入法的问题](#JetbrainsIDE)
+* 11. [解决 Linux 下 unzip 解压文件名乱码的问题](#Linuxunzip)
+* 12. [Linux zip 打包文件](#Linuxzip)
+* 13. [常用 vim 快捷键](#vim)
+* 14. [linux 批量修改文件后缀命令](#linux-1)
+* 15. [WSL2 MySQL Client](#WSL2MySQLClient)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->##  1. <a name='linuxmint'></a>linux mint 装机
+###  1.1. <a name=''></a>卸载无用软件
 
 ```
 sudo apt purge rhythmbox hexchat libreoffice-* thunderbird transmission -y
 ```
 
-### 换源&&升级
+###  1.2. <a name='-1'></a>换源&&升级
 
 图形化界面换源即可
 ```
 sudo apt update && sudo apt upgrade -y
 ```
-### 安装常用软件
+###  1.3. <a name='-1'></a>安装常用软件
 
 ```
 sudo apt install git vim tree curl fcitx fcitx-sunpinyin htop proxychains4 flameshot telegram-desktop -y
 ```
 
-### 配置 Git
+###  1.4. <a name='Git'></a>配置 Git
 ```
 git config --global user.name "zjy4fun"
 git config --global user.email "zjy4fun@gmail.com"
 ```
 
-### 生成密钥
+###  1.5. <a name='-1'></a>生成密钥
 ```
 ssh-keygen -t rsa -C "zjy4fun@gmail.com"
 ```
 
-## 安装 docker
+##  2. <a name='docker'></a>安装 docker
 注意 Linux Mint 的版本最好和 Ubuntu 的 LTS 的版本对应
 
 ```
@@ -133,14 +161,14 @@ cd ~/env/mysql
 docker compose up -d
 ```
 
-## nvm设置镜像 
-### linux
+##  3. <a name='nvm'></a>nvm设置镜像 
+###  3.1. <a name='linux'></a>linux
 ```
 export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
 export NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node/
 ```
 
-### Win
+###  3.2. <a name='Win'></a>Win
 管理员模式
 ```
 nvm npm_mirror https://npmmirror.com/mirrors/npm/  
@@ -154,7 +182,7 @@ set-ExecutionPolicy RemoteSigned
 ```
 
 
-## npm 设置镜像
+##  4. <a name='npm'></a>npm 设置镜像
 ```
 npm config set registry http://mirrors.cloud.tencent.com/npm/
 
@@ -163,7 +191,7 @@ npm config set registry https://mirrors.huaweicloud.com/repository/npm/
 npm config set registry https://registry.npmmirror.com（不推荐）
 
 ```
-## npm 特殊包镜像
+##  5. <a name='npm-1'></a>npm 特殊包镜像
 ```
 npm config set sass_binary_site https://npmmirror.com/mirrors/node-sass;
 npm config set electron_mirror https://npmmirror.com/mirrors/electron/;
@@ -176,14 +204,14 @@ npm config set node_inspector_cdnurl https://npmmirror.com/mirrors/node-inspecto
 npm config set cypress_download_mirror https://npmmirror.com/mirrors/cypress;
 ```
 
-## 解决 Jetbrains 中文输入法不跟随问题
+##  6. <a name='Jetbrains'></a>解决 Jetbrains 中文输入法不跟随问题
 
 https://github.com/RikudouPatrickstar/JetBrainsRuntime-for-Linux-x64
 
 直接替换 jbr 文件
 
 
-## Ubuntu 20.04 Gnome 禁用 tracker 避免 CPU 100%的问题
+##  7. <a name='Ubuntu20.04GnometrackerCPU100'></a>Ubuntu 20.04 Gnome 禁用 tracker 避免 CPU 100%的问题
 
 参考：https://www.cnblogs.com/hellxz/p/12321283.html
 
@@ -197,11 +225,11 @@ tracker reset --hard
 ```
 
 
-## 解决搜狗输入法简体/繁体切换设置不生效的问题
+##  8. <a name='-1'></a>解决搜狗输入法简体/繁体切换设置不生效的问题
 
 需要在 fcitx 的全局设置里面关掉快捷键
 
-## 解决Ubuntu中文显示异常的问题
+##  9. <a name='Ubuntu'></a>解决Ubuntu中文显示异常的问题
 
 修改
 ```
@@ -209,26 +237,26 @@ tracker reset --hard
 ```
 中的配置，把SC放到第一位。
 
-## 解决 Jetbrains IDE 无法切换中文输入法的问题
+##  10. <a name='JetbrainsIDE'></a>解决 Jetbrains IDE 无法切换中文输入法的问题
 
 Help -> Edit Custom VM Options 追加下面的内容
 ```
 -Drecreate.x11.input.method=true
 ```
 
-## 解决 Linux 下 unzip 解压文件名乱码的问题
+##  11. <a name='Linuxunzip'></a>解决 Linux 下 unzip 解压文件名乱码的问题
 
 ```
 unzip -O cp936
 ```
 
-## Linux zip 打包文件
+##  12. <a name='Linuxzip'></a>Linux zip 打包文件
 
 ```
 zip -r outputfile folder1 folder2 folder3
 ```
 
-## 常用 vim 快捷键
+##  13. <a name='vim'></a>常用 vim 快捷键
 
 1. 移动光标
 
@@ -279,13 +307,13 @@ zip -r outputfile folder1 folder2 folder3
 - ctrl + r    反撤销（撤销后又后悔了可以执行该命令）
 
 
-## linux 批量修改文件后缀命令
+##  14. <a name='linux-1'></a>linux 批量修改文件后缀命令
 
 ```bash
 rename 's/\.js/\.jsx/' *
 ```
 
-## WSL2 MySQL Client
+##  15. <a name='WSL2MySQLClient'></a>WSL2 MySQL Client
 
 需要安装 mysql-client 访问 docker 中的 mysql-server，同时需要指定 ip 和端口号
 ```bash
