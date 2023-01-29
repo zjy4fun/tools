@@ -320,10 +320,16 @@ zip -r outputfile folder1 folder2 folder3
 - ctrl + r    反撤销（撤销后又后悔了可以执行该命令）
 
 
-##  14. <a name='linux-1'></a>linux 批量修改文件后缀命令
+##  14. <a name='linux-1'></a>linux 批量修改文件名命令
 
+修改后缀：
 ```bash
 rename 's/\.js/\.jsx/' *
+```
+
+修改前缀：
+```bash
+for i in `ls`; do mv -f $i `echo "text_"$i`; done
 ```
 
 ##  15. <a name='WSL2MySQLClient'></a>WSL2 MySQL Client
