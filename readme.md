@@ -319,6 +319,9 @@ zip -r outputfile folder1 folder2 folder3
 - u           普通模式下，撤销上一个操作
 - ctrl + r    反撤销（撤销后又后悔了可以执行该命令）
 
+6. 移动某一行代码
+
+- :3m4        将第3行代码移动到第四行(向上移动需要注意写目标行数的上一行)
 
 ##  14. <a name='linux-1'></a>linux 批量修改文件名命令
 
