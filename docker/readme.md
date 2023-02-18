@@ -66,6 +66,8 @@ services:
       - /home/z/env/mysql/source:/docker-entrypoint-initdb.d
 ```
 
+对于 m1 mac ，应该选择 arm64v8/mysql 镜像
+
 4. 启动 docker-compose
 ```bash
 cd ~/env/mysql
